@@ -1,21 +1,38 @@
-import pluginJs from "@eslint/js";
-import globals from "globals";
+import globals from 'globals';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  // Browser environment for main app files
   {
+    files: ['js/**/*.js', 'css/**/*.js'],
     languageOptions: {
       globals: {
         ...globals.browser,
-        describe: true, // Used for grouping tests
-        test: true, // Used to create tests
-        it: true, // Alternative way to create tests
-        expect: true, // Used for test assertions
-        require: true, // Used in Node.js files like Tailwind config
-        module: true, // Used in Node.js files like Tailwind config
-        process: true, // Used for environment variables later
+        describe: true,  // for unit tests
+        test: true,      // for unit tests
+        it: true,        // alternative for tests
+        expect: true,    // assertions in tests
+        require: true,   // Node.js usage (like Tailwind config)
+        module: true,    // Node.js usage
+        process: true,   // for environment variables
       },
     },
   },
-  pluginJs.configs.recommended,
+  // Node.js environment for config and test files
+  {
+    files: ['*.config.js', '*.config.mjs', 'tests/**/*.js', 'playwright.config.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        describe: true,
+        test: true,
+        it: true,
+        expect: true,
+        require: true,
+        module: true,
+        process: true,
+      },
+    },
+  },
 ];
