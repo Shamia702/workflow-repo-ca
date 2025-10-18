@@ -6,13 +6,13 @@ import { displayVenueList } from "./listeners/venues/displayVenueList.js";
 import { displayVenue } from "./listeners/venues/displayVenue.js";
 
 function initializeApp() {
-  createMenu()
-  logoutButtonListener()
+  createMenu();
+  logoutButtonListener();
 
   const path = window.location.pathname;
   console.log(path);
 
-            if (path === "/" || path === "/index.html") {
+  if (path === "/" || path === "/index.html") {
     displayVenueList();
   } else if (path.startsWith("/login")) {
     loginFormListener();
