@@ -27,14 +27,8 @@
     "vitest": "^3.2.4"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ],
-    "*.html": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+  "*.js": ["prettier --write", "eslint --fix"],
+  "*.html": ["prettier --write"]
+}
+
 }
