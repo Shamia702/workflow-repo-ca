@@ -2,7 +2,6 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { saveUser, getUsername, clearStorage } from "../../js/utils/storage.js";
 
 describe("getUsername", () => {
-  // Clear storage before each test
   beforeEach(() => {
     clearStorage();
   });
