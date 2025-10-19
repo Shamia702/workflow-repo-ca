@@ -8,6 +8,7 @@
     "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "prepare": "husky install",
     "start": "live-server --port=5500",
+    "format": "prettier --write .",
     "test:unit": "npx vitest run tests",
     "test:playwright": "npx playwright test",
     "test:playwright:headed": "npx playwright test --headed",
