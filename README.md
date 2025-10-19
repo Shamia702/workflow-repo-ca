@@ -41,45 +41,41 @@ npm run test:playwright:report
 This project uses environment variables.
 Create a .env file in the root of your project using this format:
 
+```bash
 TEST_USER_EMAIL=your-email@stud.noroff.no
 TEST_USER_PASSWORD=your-password
-
+```
 
 Also include a .env.example file with the same variable names (but without real values).
 Make sure .env is listed in .gitignore.
 
-## Available Scripts
+### Available Scripts
 
-npm start – Start the development server
+**npm start** – Start the development server
 
-npm run lint – Run ESLint
+**npm run lint** – Run ESLint
 
-npm run format – Format code with Prettier
+**npm run format** – Format code with Prettier
 
-npm run test:unit – Run unit tests with Vitest
+**npm run test:unit** – Run unit tests with Vitest
 
-npm run test:playwright – Run Playwright tests
+**npm run test:playwright** – Run Playwright tests
 
-npm run test:playwright:headed – Run Playwright tests in headed mode
+**npm run test:playwright:headed** – Run Playwright tests in headed mode
 
-npm run test:playwright:report – View Playwright test report
+**npm run test:playwright:report** – View Playwright test report
 
 ## Technologies Used
 
-JavaScript
-
-HTML / CSS
-
-ESLint
-
-Prettier
-
-Vitest
-
-Playwright
-
-Husky (for pre-commit hooks)
+- JavaScript
+- HTML / CSS
+- ESLint
+- Prettier
+- Vitest
+- Playwright
+- Husky (for pre-commit hooks)
 
 ## Author
 
-Shamia Hashim
+[Shamia702](https://github.com/Shamia702)
+
