@@ -12,7 +12,7 @@ describe("isActivePath", () => {
   });
 
   it("returns true when current path includes the href", () => {
-    expect(isActivePath("/about/team", "/about")).toBe(true);
+    expect(isActivePath("/about", "/about/team")).toBe(true);
   });
 
   it("returns false when paths don't match", () => {
